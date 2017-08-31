@@ -104,6 +104,11 @@ Creating self-contained single-file bitrot-free executable scripts.
 
 Use Text not String.
 
+[stack script interpreter](https://docs.haskellstack.org/en/stable/GUIDE/#script-interpreter)
+
+
+
+
 ### `stack new` One-off Projects
 
 Creating one-off projects.
