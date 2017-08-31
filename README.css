@@ -1,0 +1,256 @@
+body {
+color: #aaaaaa;
+background-color: #1d1d1d;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+padding:1em;
+font-size:1.2em;
+}
+
+img {
+}
+
+h1, h2, h3, h4, h5, h6 {
+text-rendering: optimizelegibility;
+font-weight:normal;
+color:#aaaaaa;
+}
+
+h1 a:link,
+h1 a:visited,
+h2 a:link,
+h2 a:visited,
+h3 a:link,
+h3 a:visited,
+h4 a:link,
+h4 a:visited,
+h5 a:link,
+h5 a:visited,
+h6 a:link ,
+h6 a:visited {
+color:#AAAAAA;
+}
+
+h1 {
+margin-top:5em;
+margin-bottom:1em;
+/*
+background: linear-gradient(180deg, black, #1d1d1d);
+padding-bottom:1em;
+padding-left:.5em;
+padding-top:.5em;
+*/
+/*
+text-shadow:0 .3em .3em black;
+*/
+border-top: 3px solid #444;
+padding-top:.3em;
+}
+
+h2 {
+margin-top:4em;
+margin-bottom:1em;
+border-top: 1px dashed #444;
+padding-top:.5em;
+}
+
+h3 {
+margin-top:2em;
+margin-bottom:.5em;
+}
+
+h4 {
+margin-top:1em;
+margin-bottom:.5em;
+}
+
+h5 {
+margin-top:1em;
+}
+
+h6 {
+margin-top:.5em;
+}
+
+p {
+margin-top:0;
+margin-bottom:.7em;
+max-width:60em;
+line-height:1.5em;
+text-indent:-1em;
+padding-left:1em;
+}
+
+ul {
+}
+
+ol {
+padding-left:1.1em;
+}
+/* http://stackoverflow.com/questions/21369843/is-there-any-way-to-make-numbers-in-ordered-list-bold */
+
+/*
+ol {
+margin: 0 0 1.5em;
+padding: 0;
+counter-reset: item;
+}
+
+ol > li {
+margin: 0;
+padding: 0 0 0 2em;
+text-indent:-2em;
+list-style-type:none;
+counter-increment: item;
+}
+
+ol > li * {
+text-indent:0;
+}
+
+ol > li:before {
+display: inline-block;
+width: 1em;
+padding-right:0.5em;
+font-weight:bold;
+text-align:right;
+content: counter(item) ".";
+}
+*/
+
+/*
+ol > li {
+font-weight:bold;
+color:white;
+}
+
+ol > li * {
+font-weight:normal;
+color: #aaaaaa;
+}
+*/
+
+
+li {
+    margin-bottom:.5em;
+}
+
+
+
+dl {
+}
+
+dt {
+}
+
+dd {
+}
+
+
+
+a:link, a:visited {
+text-decoration: none;
+color: #AAAACC;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+p a:link, p a:visited {
+border: 2px solid #444460;
+border-radius: 3px;
+}
+
+blockquote {
+margin-left: 1em;
+padding-left: 1em;
+border-left: .2em solid #444444;
+}
+
+
+/* http://code.stephenmorley.org/html-and-css/fixing-browsers-broken-monospace-font-handling/ */
+pre,
+code,
+kbd,
+samp,
+tt{
+font-family:monospace,monospace;
+font-size:1em;
+color: white!important;
+}
+
+pre {
+border: .2em solid #444444;
+border-radius: 0.5em;
+display: block;
+padding: .5em;
+white-space: pre-wrap;
+word-break: break-all;
+word-wrap: break-word;
+background-color: #292929;
+line-height:1.5em;
+}
+
+code { background-color:inherit!important;} /* undo the pandoc zenburn background-color for code*/
+
+hr {
+	border: 0;
+	border-bottom: 1px solid #eee;
+	border-top: 1px solid #ddd;
+	margin: 20px 0;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted #999;
+	cursor: help;
+}
+
+table {
+	max-width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+table th,
+table td {
+	padding: 8px;
+	line-height: 20px;
+	text-align: left;
+	vertical-align: top;
+	border-top: 1px solid #ddd;
+}
+
+table thead th {
+	vertical-align: bottom;
+}
+
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+	border-top: 0;
+}
+
+table tbody + tbody {
+  border-top: 2px solid #ddd;
+}
+
+table table {
+	background-color: #fff;
+}
+
+em {
+color:white!important;
+}
+
+b {
+color:white!important;
+}
+
+i {
+color:white!important;
+}
+
+strong {
+color:white!important;
+}

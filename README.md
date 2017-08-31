@@ -1,28 +1,27 @@
 
-# Recipies for Haskell Programming in the Small
+# Haskell Programming in the Small
 
 Software has a tendency to start as a casual afternoon experiment
 and then metastasize into a massive enterprise.
 
-I mention this tendency when I am participating in conversations about
-the relative merits of programming languages and am advised
+I mention this tendency when I am participating in a conversation about
+the merits of programming languages and am advised
 to “pick the right tool for the job.”
 
 The scope of the job is so often
-unknown when beginning it. That advice is especially troublesome in
+unknown when beginning it. That tool-picking advice is especially troublesome in
 the important case when one is surprised by the increasing importance of the
 job and the rapid metastatic success of the program which performs the job.
 
-In the happy circumstance that people actually use the software,
+In the happy circumstance that people actually use our software,
 we want to be able to scale it up in performance and complexity. If the
 tool picked was Python or PHP, then scaling it up will require
 [heroic feats of computer programming](https://www.facebook.com/note.php?note_id=10150415177928920).
 
 Haskell distinguishes itself in how well it applies to a broad domain
-of computer programming tasks from grand to trivial.
+of computer programming tasks from [grand to trivial](https://en.wikipedia.org/wiki/Programming_in_the_large_and_programming_in_the_small).
 
-It is famously well-suited for large
-programs which must
+It is famously well-suited for large programs which must
 [run fast](http://benchmarksgame.alioth.debian.org/u64q/which-programs-are-fastest.html),
 [refactor easily](http://neilmitchell.blogspot.jp/2015/02/refactoring-with-equational-reasoning.html),
 and
@@ -34,22 +33,22 @@ we are prepared when a little job expands into a major career project.
 This is a cookbook about Haskell programming in the small. Haskell is
 wonderful for the daily command-line work of scripting, analysis, and automation.
 There is no trade-off! Once one has the recipies at hand, Haskell one-liners
-are as simple as `sed` and Haskell scripts are as simple as Perl.
+are as easy as Perl and Haskell scripts are as easy as Python.
 
-1. Haskell one-liners for Unix piping
-2. Haskell executable script files
-3. Haskell one-off buildable projects
+1. Haskell one-liners for Unix pipes.
+2. Haskell executable script files.
+3. Haskell one-off buildable projects.
 
 For these recipies, the essential ingredients are the
 [Glasgow Haskell Compiler](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/index.html)
 and the
 [Haskell Stack](https://docs.haskellstack.org/en/stable/README/).
 
-### `stack ghc -e` One-Liners
+### Recipies for `stack ghc -e` One-Liners
 
 Using Haskell to participate in Unix pipes.
 
-[Haskell on the Command Line by Joachim Breiner](http://www.joachim-breitner.de/blog/156-Haskell_on_the_Command_Line)
+[Haskell on the Command Line by Joachim Breitner](http://www.joachim-breitner.de/blog/156-Haskell_on_the_Command_Line)
 
 #### `.ghci`
 
@@ -66,10 +65,11 @@ is [point-free expressions](https://wiki.haskell.org/Pointfree).
 The `-e` argument to `ghc` has the same meaning that it does for `perl`; it
 puts `ghc` in [GHC Expression evaluation mode](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/using.html#eval-mode).
 
-~~~{bash}
+```bash
 # apply function (String -> String) to entire stream
 # example: name the argument
 # echo "hello" | ghce '\x -> sort x'
+# echo "hello" | ghce sort
 ghce () {
     stack ghc --package split --package safe --verbosity error -- -e "interact ( $* )"
 }
@@ -91,12 +91,12 @@ ghcel () {
 ghcelf () {
     stack ghc --package split --package safe --verbosity error -- -e "interact $ unlines . fmap ( $* ) . lines"
 }
-~~~
+```
 
 
 
 
-### `stack script` Scripts
+### Recipies for `stack script` Scripts
 
 Creating self-contained single-file bitrot-free executable scripts.
 
@@ -109,6 +109,6 @@ Use Text not String.
 
 
 
-### `stack new` One-off Projects
+### Recipies for `stack new` One-Off Projects
 
 Creating one-off projects.
