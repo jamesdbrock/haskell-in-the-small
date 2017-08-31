@@ -35,9 +35,9 @@ wonderful for the daily command-line work of scripting, analysis, and automation
 There is no trade-off! Once one has the recipies at hand, Haskell one-liners
 are as easy as Perl and Haskell scripts are as easy as Python.
 
-1. Haskell one-liners for Unix piping
-2. Haskell executable script files
-3. Haskell one-off buildable projects
+1. Haskell one-liners for Unix pipes.
+2. Haskell executable script files.
+3. Haskell one-off buildable projects.
 
 For these recipies, the essential ingredients are the
 [Glasgow Haskell Compiler](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/index.html)
@@ -65,10 +65,11 @@ is [point-free expressions](https://wiki.haskell.org/Pointfree).
 The `-e` argument to `ghc` has the same meaning that it does for `perl`; it
 puts `ghc` in [GHC Expression evaluation mode](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/using.html#eval-mode).
 
-~~~{bash}
+```bash
 # apply function (String -> String) to entire stream
 # example: name the argument
 # echo "hello" | ghce '\x -> sort x'
+# echo "hello" | ghce sort
 ghce () {
     stack ghc --package split --package safe --verbosity error -- -e "interact ( $* )"
 }
@@ -90,7 +91,7 @@ ghcel () {
 ghcelf () {
     stack ghc --package split --package safe --verbosity error -- -e "interact $ unlines . fmap ( $* ) . lines"
 }
-~~~
+```
 
 
 
@@ -103,6 +104,6 @@ Creating self-contained single-file bitrot-free executable scripts.
 
 Use Text not String.
 
-### Recipies for `stack new` One-off Projects
+### Recipies for `stack new` One-Off Projects
 
 Creating one-off projects.
