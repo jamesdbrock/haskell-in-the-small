@@ -1,4 +1,3 @@
-
 # Haskell Programming in the Small
 
 Software has a tendency to start as a casual afternoon experiment
@@ -65,7 +64,13 @@ is [point-free expressions](https://wiki.haskell.org/Pointfree).
 The `-e` argument to `ghc` has the same meaning that it does for `perl`; it
 puts `ghc` in [GHC Expression evaluation mode](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/using.html#eval-mode).
 
+[Haskell One Liners by Paul Meng](http://mno2.github.io/posts/2015-02-26-haskell-one-liners.html)
+
+[H by Mitchell Rosen](https://github.com/mitchellwrosen/h)
+
 ```bash
+$ echo "hello" | stack --package split ghc -- -e "interact sort"
+
 # apply function (String -> String) to entire stream
 # example: name the argument
 # echo "hello" | ghce '\x -> sort x'
