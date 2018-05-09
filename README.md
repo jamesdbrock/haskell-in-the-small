@@ -49,6 +49,8 @@ Using Haskell to participate in Unix pipes.
 
 [Haskell on the Command Line by Joachim Breitner](http://www.joachim-breitner.de/blog/156-Haskell_on_the_Command_Line)
 
+Maybe a special package for command-line usage?
+
 #### `.ghci`
 
 
